@@ -1,13 +1,4 @@
 <resources>
     <string name="app_restaurante">Nome do Seu Aplicativo</string>
-    <string-array name="foods">
-        <item>Comida 1</item>
-        <item>Comida 2</item>
-        <!-- Adicione outros itens de comida aqui -->
-    </string-array>
-    <string-array name="prices">
-        <item>10.0</item>
-        <item>15.0</item>
-        <!-- Adicione outros preços aqui -->
-    </string-array>
+
 </resources>
