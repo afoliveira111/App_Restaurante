@@ -1,6 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+    <style name="AppTheme.PopupOverlay">
+        <item name="android:popupTheme">@style/AppTheme.PopupOverlay</item>
+
+        <!-- Definições de estilo para o PopupOverlay -->
+    </style>
     <style name="Base.Theme.App_Restaurante" parent="Theme.Material3.DayNight.NoActionBar">
+
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
