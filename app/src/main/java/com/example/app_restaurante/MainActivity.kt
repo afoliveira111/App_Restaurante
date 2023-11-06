@@ -1,9 +1,11 @@
 package com.example.app_restaurante
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.LinearLayout
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -26,7 +29,20 @@ class MainActivity : AppCompatActivity() {
         val btnFinalizarPagamento = findViewById<Button>(R.id.btnFinalizarPagamento)
         btnFinalizarPagamento.setOnClickListener {
             // Implemente a lógica para a tela de finalização de pagamento
+
+            setContentView(R.layout.activity_initial)
+
+            val initialLayout = findViewById<LinearLayout>(R.id.layout_initial)
+            initialLayout.setOnClickListener {
+                // Inicie a próxima atividade (substitua `NextActivity::class.java` pelo nome da sua próxima atividade)
+                val intent = Intent(this, NextActivity::class.java)
+                startActivity(intent)
+                finish() // Opcional: encerre a tela inicial após a abertura da próxima atividade
+            }
         }
+
+
+
 
         // Inicialize a lista de produtos
         recyclerView = findViewById(R.id.listaprodutos)
@@ -43,7 +59,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
@@ -53,6 +68,5 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
-
-
