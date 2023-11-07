@@ -12,6 +12,7 @@ class FoodAdapter(private val items: List<FoodItem>) : RecyclerView.Adapter<Food
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
         val priceTextView: TextView = itemView.findViewById(R.id.priceTextView)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
