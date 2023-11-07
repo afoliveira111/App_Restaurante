@@ -2,6 +2,7 @@ package com.example.app_restaurante
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -9,6 +10,8 @@ class NextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_next)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val btnMenu = findViewById<Button>(R.id.btnmenu)
 
@@ -19,5 +22,14 @@ class NextActivity : AppCompatActivity() {
         finish()
 
         }
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
