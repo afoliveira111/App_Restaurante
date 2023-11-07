@@ -1,6 +1,7 @@
 package com.example.app_restaurante
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -21,7 +22,14 @@ class MainActivity : AppCompatActivity() {
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+
+        toolbar.setNavigationOnClickListener {
+            val intent = Intent(this, NextActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
 
         // Inicialize a lista de produtos
@@ -46,6 +54,6 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
         }
-        return super.onOptionsItemSelected(item)
+     return super.onOptionsItemSelected(item)
     }
 }
