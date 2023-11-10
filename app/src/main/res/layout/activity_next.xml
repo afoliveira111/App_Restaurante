@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/Layout_next"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,24 +8,31 @@
     android:gravity="center">
 
     <!-- Logotipo -->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_restaurant_menu_24"
-        android:contentDescription="App_Restaurante" />
 
     <!-- Texto -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:contentDescription="App_Restaurante"
+        android:src="@drawable/baseline_restaurant_menu_24" />
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="200dp"
         android:text="Clique abaixo para ver o menu"
-        android:textSize="16sp"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
         android:id="@+id/btnmenu"
-        android:text="Clique aqui"  />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="Clique aqui" />
 
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
