@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Cores básicas -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="orange">#FFA500</color>
+
+    <!-- Cores de fundo -->
+    <color name="background">#F5F5F5</color>
+    <color name="backgroundDark">#E0E0E0</color>
+
+    <!-- Cores de texto -->
+    <color name="textPrimary">#333333</color>
+    <color name="textSecondary">#666666</color>
+
+    <!-- Cores de acentuação -->
+    <color name="accentColor">#FF4081</color>
+    <color name="accentDarkColor">#D81B60</color>
+
+    <!-- Cores de botão -->
+    <color name="buttonColor">#2196F3</color>
+    <color name="buttonDarkColor">#1565C0</color>
 </resources>
