@@ -23,7 +23,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:text="Clique abaixo para ver o menu"
         android:textColor="@android:color/black"
         android:textSize="16sp" />
