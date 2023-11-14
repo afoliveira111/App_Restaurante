@@ -1,4 +1,7 @@
 <resources>
     <string name="app_restaurante">Nome do Seu Aplicativo</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:statusBarColor">@color/orange</item>
+    </style>
 
 </resources>
