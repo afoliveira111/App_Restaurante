@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,22 +16,12 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     private val foodItems = mutableListOf<FoodItem>()
+
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-
-        toolbar.setNavigationOnClickListener {
-            val intent = Intent(this, NextActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
 
 
         // Inicialize a lista de produtos
@@ -50,15 +41,30 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressed() // Isso executa a ação de voltar
+            R.id.menu_back -> {
+                // Ação para o item de menu "Voltar"
+                onBackPressed()
                 return true
             }
+            R.id. -> {
+                // Lógica para o item 1 do menu
+                showToast("Item 1 selecionado")
+                return true
+            }
+
+            // Adicione mais casos conforme necessário
+            else -> return super.onOptionsItemSelected(item)
         }
-     return super.onOptionsItemSelected(item)
     }
+
+    // Criar o menu na barra superior
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         return true
+    }
+
+    // Função auxiliar para exibir Toast
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
