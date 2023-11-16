@@ -1,42 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="0dp"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_collapseMode="pin"
-        app:popupTheme="@style/AppTheme.PopupOverlay"
-        app:title="App_restaurante"
-        app:subtitle="Faça seu pedido"
-        app:subtitleTextAppearance="@color/white"
-        app:navigationIcon="@drawable/baseline_keyboard_arrow_left_24"
-        android:background="@color/material_dynamic_neutral_variant80" />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listaprodutos"
+    <!-- Seu conteúdo vai aqui -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F7F7F7" /> <!-- Definindo um fundo de cor mais clara -->
+        android:orientation="vertical">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaprodutos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F7F7F7" />
 
-    <Button
-        android:id="@+id/btnFinalizarPagamento"
+        <Button
+            android:id="@+id/btnFinalizarPagamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finalizar Pagamento"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+    <!-- BottomAppBar -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="15dp"
+        app:fabCradleVerticalOffset="10dp"
+        app:navigationIcon="@drawable/baseline_keyboard_arrow_left_24"
+        app:menu="@menu/bottom_app_bar_menu"
+        app:contentDescription="@string/btnvoltar"/>
+
+    <!-- FloatingActionButton -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Finalizar Pagamento"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp" />
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/baseline_restaurant_menu_24"
+        app:backgroundTint="@color/orange"
+        app:layout_anchor="@id/bottom_app_bar"/>
 
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
