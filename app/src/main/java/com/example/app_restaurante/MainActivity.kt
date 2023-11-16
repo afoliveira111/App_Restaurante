@@ -1,13 +1,13 @@
 package com.example.app_restaurante
 
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
+
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -46,9 +46,9 @@ class MainActivity : AppCompatActivity() {
                 onBackPressed()
                 return true
             }
-            R.id. -> {
+            R.id.carrinho-> {
                 // Lógica para o item 1 do menu
-                showToast("Item 1 selecionado")
+                showToast("carrinho selecionado")
                 return true
             }
 
