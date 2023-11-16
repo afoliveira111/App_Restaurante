@@ -38,7 +38,7 @@
         app:fabCradleRoundedCornerRadius="15dp"
         app:fabCradleVerticalOffset="10dp"
         app:navigationIcon="@drawable/baseline_keyboard_arrow_left_24"
-        app:menu="@menu/bottom_app_bar_menu"
+        app:menu="@menu/menu"
         app:contentDescription="@string/btnvoltar"/>
 
     <!-- FloatingActionButton -->
