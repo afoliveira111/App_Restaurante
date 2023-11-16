@@ -2,6 +2,7 @@ package com.example.app_restaurante
 
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -62,6 +63,14 @@ class MainActivity : AppCompatActivity() {
                 showToast("Carrinho selecionado")
                 // Aqui você pode adicionar lógica para mostrar ou navegar até a tela do carrinho
                 true
+            }
+            R.id.menu_back -> {
+                android.R.id.home
+                // Adicione aqui a lógica para ação do item Voltar
+                // Por exemplo, você pode iniciar a NextActivity novamente
+                val intent = Intent(this, NextActivity::class.java)
+                startActivity(intent)
+                return true
             }
 
             else -> super.onOptionsItemSelected(item)
