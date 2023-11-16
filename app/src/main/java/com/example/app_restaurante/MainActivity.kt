@@ -16,12 +16,19 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     private val foodItems = mutableListOf<FoodItem>()
+    private val cartItems = mutableListOf<FoodItem>()
+
 
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+    private fun addToCart(foodItem: FoodItem){
+            cartItems.add(foodItem)
+        }
+
 
 
         // Inicialize a lista de produtos
@@ -36,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             val adapter = FoodAdapter(foodItems)
             recyclerView.layoutManager = LinearLayoutManager(this)
             recyclerView.adapter = adapter
+            addToCart(clickedItem)
         }
 
 
@@ -46,9 +54,10 @@ class MainActivity : AppCompatActivity() {
                 onBackPressed()
                 return true
             }
-            R.id.carrinho-> {
+            R.id.carrinho -> {
                 // Lógica para o item 1 do menu
                 showToast("carrinho selecionado")
+                addToCart(cartItems)
                 return true
             }
 

@@ -16,7 +16,6 @@ class NextActivity : AppCompatActivity() {
         val btnMenu = findViewById<Button>(R.id.btnmenu)
 
         btnMenu.setOnClickListener {
-
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
