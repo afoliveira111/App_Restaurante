@@ -11,24 +11,13 @@ class NextActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_next)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val btnMenu = findViewById<Button>(R.id.btnmenu)
 
         btnMenu.setOnClickListener {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        finish()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
 
         }
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressed()
-                return true
-            }
-        }
-        return super.onOptionsItemSelected(item)
     }
 }

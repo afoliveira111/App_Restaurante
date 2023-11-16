@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
+
         // Inicialize a lista de produtos
         val foodItems = mutableListOf<FoodItem>()
         foodItems.add(FoodItem("Hamburguer", 10.99f))
@@ -30,33 +33,38 @@ class MainActivity : AppCompatActivity() {
         foodItems.add(FoodItem("Refrigerante", 8.99f))
         foodItems.add(FoodItem("Salada", 8.99f))
 
+
         recyclerView = findViewById(R.id.listaprodutos)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+
         val adapter = FoodAdapter(foodItems) { clickedItem ->
             addToCart(clickedItem)
         }
         recyclerView.adapter = adapter
     }
 
+
     private fun addToCart(foodItem: FoodItem) {
         cartItems.add(foodItem)
         showToast("Produto adicionado ao carrinho")
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
+        return when (item.itemId) {
             android.R.id.home -> {
                 onBackPressed()
-                return true
+                true
             }
 
             R.id.carrinho -> {
                 showToast("Carrinho selecionado")
                 // Aqui você pode adicionar lógica para mostrar ou navegar até a tela do carrinho
-                return true
+                true
             }
 
-            else -> return super.onOptionsItemSelected(item)
+            else -> super.onOptionsItemSelected(item)
         }
     }
 

@@ -37,9 +37,7 @@
         app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="15dp"
         app:fabCradleVerticalOffset="10dp"
-        app:navigationIcon="@drawable/baseline_keyboard_arrow_left_24"
-        app:menu="@menu/menu"
-        app:contentDescription="@string/btnvoltar" />
+        app:menu="@menu/menu" />
 
     <!-- FloatingActionButton -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
