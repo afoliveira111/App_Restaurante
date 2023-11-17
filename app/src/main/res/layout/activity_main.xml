@@ -27,7 +27,7 @@
 
     </LinearLayout>
 
-    <!-- BottomAppBar -->
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_back"
         android:layout_width="match_parent"
@@ -40,7 +40,6 @@
         app:menu="@menu/menu" />
 
 
-    <!-- FloatingActionButton -->
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
         // Inicialize a lista de produtos
         val foodItems = mutableListOf<FoodItem>()
         foodItems.add(FoodItem("Hamburguer", 10.99f))
@@ -54,27 +53,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            android.R.id.home -> {
-                // Isso será acionado quando o botão Voltar for pressionado na barra de aplicativos
-                onBackPressed()
-                true
+        when (item.itemId) {
+            R.id.menu_item_back -> {
+                // Lógica para voltar para NextActivity
+                val intent = Intent(this, NextActivity::class.java)
+                startActivity(intent)
+                return true
             }
 
             R.id.carrinho -> {
-                showToast("Carrinho selecionado")
-                // Adicione lógica para ir para a tela do carrinho, se necessário
-                true
+                // Lógica para adicionar itens ao carrinho
+                showToast("Produto adicionado ao carrinho")
+                return true
             }
 
-            R.id.menu_back -> {
-                // Navegue de volta para a NextActivity
-                val intent = Intent(this, NextActivity::class.java)
-                startActivity(intent)
-                true
-            }
-
-            else -> super.onOptionsItemSelected(item)
+            else -> return super.onOptionsItemSelected(item)
         }
     }
 
@@ -83,9 +76,8 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-
 }
-
