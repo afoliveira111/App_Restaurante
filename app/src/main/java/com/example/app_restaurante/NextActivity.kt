@@ -66,24 +66,20 @@ class NextActivity : AppCompatActivity() {
         // Outras configurações necessárias
     }
 
+    private fun addToCart(foodItem: FoodItem) {
+        cartItems.add(foodItem)
+        showToast("Item adicionado ao carrinho")
+    }
+
     private fun showCartItems() {
-        val cartItemsString = cartItems . joinToString (separator = "\n") { it.name }
+        // Lógica para exibir os itens no carrinho
+        val cartItemsString = cartItems.joinToString(separator = "\n") { it.name }
         showToast("Itens no Carrinho:\n$cartItemsString")
     }
-}
-    private fun addToCart(foodItem: FoodItem) {
-    cartItems.add(foodItem)
-    showToast("Item adicionado ao carrinho")
-}
-
-    private fun showCartItems() {
-    // Lógica para exibir os itens no carrinho
-    val cartItemsString = cartItems.joinToString(separator = "\n") { it.name }
-    showToast("Itens no Carrinho:\n$cartItemsString")
-}
 
     private fun showToast(message: String) {
-    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
 }
 
 
