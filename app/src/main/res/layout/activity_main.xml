@@ -17,16 +17,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:contentDescription="App_Restaurante"
-        android:src="@drawable/chef" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="300dp"
-        android:text="Clique abaixo para ver o menu"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
+        android:src="@drawable/restaurante_logo" />
 
     <Button
         android:id="@+id/btnmenu"
