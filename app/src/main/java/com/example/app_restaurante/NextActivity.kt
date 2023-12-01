@@ -55,7 +55,8 @@ class NextActivity : AppCompatActivity() {
 
                 R.id.carrinho -> {
                     val intent = Intent(this, CarrinhoActivity::class.java)
-                    startActivity(intent)
+                    intent.putExtra("cartItems", ArrayList(cartItems))
+                    startActivityForResult(intent, CART_REQEUST_CODE)
                     showCartItems()
                     true
                 }
