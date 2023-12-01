@@ -50,6 +50,8 @@
         android:layout_gravity="bottom"
         app:fabAlignmentMode="center"
         app:fabCradleMargin="10dp"
+        android:background="#4BF85600"
+        app:itemRippleColor="@color/white"
         app:fabCradleRoundedCornerRadius="15dp"
         app:fabCradleVerticalOffset="10dp"
         app:menu="@menu/menu" />

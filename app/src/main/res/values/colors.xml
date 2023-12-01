@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Cores básicas -->
+    <color name="cor_personalizada">#4BF85600</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="red">#FF0000</color>
@@ -25,4 +26,5 @@
     <!-- Cores de botão -->
     <color name="buttonColor">#2196F3</color>
     <color name="buttonDarkColor">#1565C0</color>
+
 </resources>
