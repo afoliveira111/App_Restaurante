@@ -54,7 +54,8 @@ class NextActivity : AppCompatActivity() {
                 }
 
                 R.id.carrinho -> {
-                    // Lógica para exibir os itens no carrinho
+                    val intent = Intent(this, CarrinhoActivity::class.java)
+                    startActivity(intent)
                     showCartItems()
                     true
                 }
