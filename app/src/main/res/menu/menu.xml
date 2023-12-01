@@ -5,7 +5,7 @@
     <item
         android:id="@+id/menu_item_back"
         android:title="Início"
-        android:icon="@drawable/baseline_keyboard_arrow_left_24"
+        android:icon="@drawable/baseline_home_24"
         app:showAsAction="always"/>
 
     <item
