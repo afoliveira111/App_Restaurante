@@ -46,26 +46,21 @@ class NextActivity : AppCompatActivity() {
         btnInicio.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_item_back -> {
-                    // Lógica para voltar para MainActivity
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
-                    finish()  // Certifique-se de chamar finish() para encerrar a NextActivity
+                    finish()
                     true
                 }
-
                 R.id.carrinho -> {
+                    // Passa a lista de itens no carrinho para a CarrinhoActivity
                     val intent = Intent(this, CarrinhoActivity::class.java)
                     intent.putExtra("cartItems", ArrayList(cartItems))
-                    startActivityForResult(intent, CART_REQEUST_CODE)
-                    showCartItems()
+                    startActivity(intent)
                     true
                 }
-
                 else -> false
             }
         }
-
-        // Outras configurações necessárias
     }
 
     private fun addToCart(foodItem: FoodItem) {
